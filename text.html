@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example HTML</title>
+</head>
+<body>
+    <h1>Example H1</h1>
+    <h2>Example H2</h2>
+    <h3>Example H3</h3>
+    
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+    Temporibus a error ea obcaecati doloribus rerum amet dolore dolor id laboriosam? 
+    Molestias ipsa odit blanditiis praesentium facilis sit accusamus tenetur quam?
+
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+    Dolores nesciunt nihil ratione mollitia, esse vitae, 
+    sapiente quaerat accusantium sit aut ut soluta accusamus consectetur 
+    pariatur sint consequatur tempora. Quo, tempore.
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        let socket = io();
+
+        socket.on('message', (data) => {
+            document.write(data);
+        })
+
+        socket.on('testerEvent', (data) => {
+            document.write(data.description);
+        })
+
+        socket.emit('clientEvent', 'Sent an event from the client');
+        
+    </script>
+
+</body>
+</html>
