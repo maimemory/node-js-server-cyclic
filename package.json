@@ -5,14 +5,14 @@
   "main": "mymodule.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node express.js"
+    "start": "node expess.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@types/node": "^20.4.1",
-    "expess": "^4.18.2",
+    "express": "^4.18.2",
     "nodemon": "^3.0.1",
     "text-file-follower": "^0.1.0"
   }
